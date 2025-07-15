@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: linkstack
-          image: ajinkyadoc1234/linkstack-app:13
+          image: ajinkyadoc1234/linkstack-app:latest
           ports:
             - containerPort: 80
           resources:
