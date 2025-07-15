@@ -50,7 +50,9 @@ RUN chown -R apache:apache /htdocs
 RUN find /htdocs -type d -print0 | xargs -0 chmod 0755
 RUN find /htdocs -type f -print0 | xargs -0 chmod 0644
 
-COPY --chmod=0755 docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod 0755 /usr/local/bin/docker-entrypoint.sh
+
 
 USER apache:apache
 
